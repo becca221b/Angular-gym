@@ -1,0 +1,10 @@
+.second-thead td{
+    background-color: #8F857D;
+    color: whitesmoke;
+}
+@media (max-width: 325px) {
+    table{
+        font-size: .5rem;
+    }
+}
+

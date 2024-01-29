@@ -1,0 +1,40 @@
+<article class="d-flex justify-content-center h-100 row">
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center">
+        <div class="col-xs-12 col-lg-9">
+          <table class="table table-bordered mt-3" style="text-align: center;">
+            <thead>
+              <tr>
+                <td colspan="6" style="font-weight: bold; font-size: x-large;"><h2>Lista de Alumnos</h2></td>
+              </tr>
+            </thead>
+          
+            <thead>
+              <tr class="second-thead">
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Edad</td>
+                <td>Peso en kg</td>
+                <td>Celular</td>
+                <td>Fecha de ingreso</td>
+              </tr>
+            </thead>
+            <tbody id="contenido">
+              @for (alumno of alumnos; track alumno.name) {
+                <tr>
+                  <td>{{ alumno.name }}</td>
+                  <td>{{ alumno.lastname }}</td>
+                  <td>{{ alumno.age }}</td>
+                  <td>{{ alumno.weigth }}</td>
+                  <td>{{ alumno.phone }}</td>
+                </tr>
+              } @empty {
+                <span>Empty list of alumnos</span>
+              }
+            </tbody>
+            <!--</tbody>-->
+          </table>
+        </div>
+      </div>
+    </div>
+  </article>
